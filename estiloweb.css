@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Times New Roman', Times, serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #d640ae, #7058c6);
+}
+
+.container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.progressbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.progressbar .step {
+  width: 25%;
+  text-align: center;
+  color: #999;
+  position: relative;
+}
+
+.progressbar .step::before {
+  content: '';
+  height: 4px;
+  width: 100%;
+  background: #ccc;
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.progressbar .step:first-child::before {
+  display: none;
+}
+
+.progressbar .step.active {
+  color: #d640ae;
+  font-weight: bold;
+}
+
+.progressbar .step.active::before {
+  background: #d640ae;
+}
+
+.page {
+  display: none;
+  flex-direction: column;
+}
+
+.page.active {
+  display: flex;
+}
+
+label {
+  margin: 10px 0 5px;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #d640ae;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #000;
+}
+
+#mensaje {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.error-input {
+  border: 1px solid red;
+}
